@@ -12,7 +12,7 @@ public class ErrorHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handle(Exception e) {
         ErrorResponse errors = new ErrorResponse();
-        errors.setCode(HttpStatus.BAD_REQUEST.toString());
+        errors.setCode(String.valueOf(HttpStatus.BAD_REQUEST.value()));
         errors.setMessage(e.getMessage());
         log.error("Error:", e);
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
