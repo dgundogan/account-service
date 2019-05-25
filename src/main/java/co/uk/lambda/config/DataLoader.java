@@ -1,4 +1,4 @@
-package co.uk.lambda.Config;
+package co.uk.lambda.config;
 
 import co.uk.lambda.domain.Account;
 import co.uk.lambda.repository.AccountRepository;
